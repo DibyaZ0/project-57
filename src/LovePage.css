@@ -1,0 +1,531 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+.love-container {
+  min-height: 100vh;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 30px;
+
+  overflow: hidden;
+}
+
+/* DARK ROMANTIC OVERLAY */
+
+.overlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to bottom right,
+    rgba(20, 0, 20, 0.45),
+    rgba(80, 0, 50, 0.35)
+  );
+
+  backdrop-filter: blur(2px);
+
+  z-index: 1;
+}
+
+/* GLASS CARD */
+
+.glass-card {
+  position: relative;
+  z-index: 5;
+
+  width: 100%;
+  max-width: 1200px;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  backdrop-filter: blur(7px);
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* GRID */
+
+.content-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  gap: 40px;
+
+  padding: 60px;
+}
+
+/* LEFT SIDE */
+
+.left-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.tagline {
+  color: #ffb2cf;
+
+  letter-spacing: 5px;
+
+  margin-bottom: 20px;
+
+  font-weight: 700;
+
+  font-size: 14px;
+}
+
+.main-heading {
+  font-size: 70px;
+
+  line-height: 1.1;
+
+  color: white;
+
+  margin-bottom: 25px;
+
+  font-weight: 800;
+}
+
+.main-heading span {
+  color: #ff79b0;
+}
+
+.description {
+  color: rgba(255, 255, 255, 0.95);
+
+  font-size: 23px;
+
+  line-height: 1.7;
+
+  margin-bottom: 25px;
+}
+
+.quote {
+  color: #ffd3e6;
+
+  font-size: 24px;
+
+  font-style: italic;
+
+  margin-bottom: 35px;
+}
+
+/* CARDS */
+
+.love-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.love-card {
+  background: rgba(255, 255, 255, 0.1);
+
+  padding: 22px;
+
+  border-radius: 22px;
+
+  color: white;
+
+  font-size: 18px;
+
+  line-height: 1.7;
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  transition: 0.3s;
+}
+
+.love-card:hover {
+  transform: translateY(-5px);
+}
+
+/* RIGHT SIDE */
+
+.right-section {
+  position: relative;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* GLOW */
+
+.image-glow {
+  position: absolute;
+
+  width: 350px;
+  height: 350px;
+
+  background: #ff4fa3;
+
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  opacity: 0.5;
+}
+
+/* MAIN IMAGE */
+
+.image-card {
+  position: relative;
+
+  z-index: 5;
+}
+
+.main-image {
+  width: 340px;
+  height: 480px;
+
+  object-fit: cover;
+
+  border-radius: 30px;
+
+  border: 3px solid rgba(255,255,255,0.2);
+
+  box-shadow: 0 15px 35px rgba(0,0,0,0.4);
+}
+
+/* BADGE */
+
+.badge {
+  position: absolute;
+
+  bottom: -20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  background: linear-gradient(
+    to right,
+    #ff4fa3,
+    #ff6b81
+  );
+
+  color: white;
+
+  padding: 15px 28px;
+
+  border-radius: 50px;
+
+  font-weight: bold;
+
+  font-size: 16px;
+
+  box-shadow: 0 0 25px rgba(255, 20, 147, 0.6);
+}
+
+/* SMALL IMAGE */
+
+.small-image {
+  position: absolute;
+
+  bottom: 10px;
+  left: 0;
+
+  width: 130px;
+  height: 130px;
+
+  object-fit: cover;
+
+  border-radius: 20px;
+
+  border: 4px solid rgba(255,255,255,0.3);
+
+  z-index: 10;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+}
+
+/* QUESTION */
+
+.question-section {
+  text-align: center;
+
+  padding: 50px 20px;
+}
+
+.question-section h2 {
+  color: white;
+
+  font-size: 50px;
+
+  margin-bottom: 20px;
+}
+
+.question-section p {
+  color: white;
+
+  font-size: 25px;
+
+  margin-bottom: 40px;
+}
+
+/* BUTTONS */
+
+.button-area {
+  position: relative;
+
+  height: 150px;
+}
+
+.yes-btn,
+.no-btn {
+  border: none;
+
+  padding: 18px 35px;
+
+  font-size: 22px;
+
+  border-radius: 50px;
+
+  cursor: pointer;
+
+  transition: 0.3s;
+
+  font-weight: 700;
+}
+
+.yes-btn {
+  background: linear-gradient(
+    to right,
+    #ff4fa3,
+    #ff6b81
+  );
+
+  color: white;
+
+  margin-right: 20px;
+
+  box-shadow: 0 0 20px rgba(255,20,147,0.5);
+}
+
+.yes-btn:hover {
+  transform: scale(1.08);
+}
+
+.no-btn {
+  background: white;
+
+  color: #444;
+
+  position: absolute;
+}
+
+/* FOOTER */
+
+.footer {
+  background: rgba(255, 20, 147, 0.6);
+
+  color: white;
+
+  text-align: center;
+
+  padding: 20px;
+
+  font-size: 18px;
+
+  font-weight: 600;
+}
+
+/* FLOATING HEARTS */
+
+.heart {
+  position: absolute;
+
+  font-size: 40px;
+
+  z-index: 2;
+
+  animation: float 3s infinite ease-in-out;
+}
+
+.heart1 {
+  top: 10%;
+  left: 10%;
+}
+
+.heart2 {
+  top: 20%;
+  right: 15%;
+}
+
+.heart3 {
+  bottom: 15%;
+  left: 20%;
+}
+
+.heart4 {
+  bottom: 20%;
+  right: 20%;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-15px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+/* MOBILE RESPONSIVE */
+
+@media (max-width: 900px) {
+
+  .content-grid {
+    grid-template-columns: 1fr;
+
+    padding: 35px 25px;
+
+    text-align: center;
+  }
+
+  .main-heading {
+    font-size: 48px;
+  }
+
+  .description {
+    font-size: 19px;
+  }
+
+  .quote {
+    font-size: 20px;
+  }
+
+  .right-section {
+    margin-top: 20px;
+  }
+
+  .main-image {
+    width: 260px;
+    height: 360px;
+  }
+
+  .small-image {
+    width: 90px;
+    height: 90px;
+
+    left: 10px;
+    bottom: 0;
+  }
+
+  .question-section h2 {
+    font-size: 36px;
+  }
+
+  .question-section p {
+    font-size: 20px;
+  }
+
+  .yes-btn,
+  .no-btn {
+    font-size: 18px;
+
+    padding: 14px 24px;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .love-container {
+    padding: 15px;
+  }
+
+  .glass-card {
+    border-radius: 20px;
+  }
+
+  .content-grid {
+    padding: 25px 18px;
+  }
+
+  .main-heading {
+    font-size: 38px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .quote {
+    font-size: 17px;
+  }
+
+  .love-card {
+    font-size: 15px;
+
+    padding: 16px;
+  }
+
+  .main-image {
+    width: 220px;
+    height: 300px;
+  }
+
+  .badge {
+    font-size: 13px;
+
+    padding: 12px 18px;
+  }
+
+  .small-image {
+    display: none;
+  }
+
+  .question-section h2 {
+    font-size: 28px;
+  }
+
+  .button-area {
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    height: auto;
+  }
+
+  .no-btn {
+    position: relative;
+  }
+
+  .footer {
+    font-size: 14px;
+  }
+}
